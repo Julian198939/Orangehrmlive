@@ -6,6 +6,7 @@ This project is a test suite for automating the testing of basic orangehrmlive l
 
 ## Project Structure
 
+```
 Orangehrmlive/
 ├── tests/ # Test code
 │ ├── login/
@@ -21,6 +22,8 @@ Orangehrmlive/
 ├── geckodriver.log # Firefox WebDriver logs
 ├── README.md # Documentation (this file)
 
+```
+
 ## Setup and Run Instructions
 
 The following instructions will help anyone download, build, and run this project successfully.
@@ -34,19 +37,19 @@ git clone https://github.com/JulianQA01/Orangehrmlive.git
 ```
 
 ```bash
-git clone https://github.com/JulianQA01/Orangehrmlive.git
+cd Orangehrmlive
 ```
 
 ## 2. Install Prerequisites
 
-"Python"
+**"Python"**:
 Ensure Python 3.8+ is installed. Verify with:
 
 ```bash
 python --version
 ```
 
-"Browser"
+**"Browser"**:
 
 -**Chrome**:
 [Download and install the latest version of Google Chrome](https://www.google.com/chrome/)
@@ -54,8 +57,9 @@ python --version
 -**Firefox**:
 [Download and install the latest version of Mozilla Firefox](https://www.mozilla.org/firefox/)
 
--**Safari**:  
- Safari is pre-installed on macOS. To enable WebDriver:
+-**Safari**:
+
+Safari is pre-installed on macOS. To enable WebDriver:
 
 1. Go to **Safari > Preferences > Advanced**, and check **Show Develop menu in the menu bar**.
 2. From the Develop menu, enable **Allow Remote Automation**.
