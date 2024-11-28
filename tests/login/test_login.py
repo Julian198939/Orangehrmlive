@@ -1,19 +1,20 @@
 import pytest
 import time
 
-from tests.utils.driver import get_driver, close_driver
+
 from tests.page.login_page import LoginPage
 
-@pytest.fixture
-def setup():
-    driver = get_driver()
-    yield driver
-    close_driver(driver)
-
-def test_valid_login(setup):
-    driver = setup
+@pytest.fixture()
+def setup(get_driver):
+    driver = get_driver
     login_page = LoginPage(driver)
     driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login") 
+    yield driver, login_page
+
+
+def test_valid_login(setup):
+    driver, login_page = setup
+    login_page = LoginPage(driver)
     
     # wait until link is fully visible
     login_page.link_fully_visible()
@@ -33,9 +34,8 @@ def test_valid_login(setup):
 
 
 def test_invalid_login(setup):
-    driver = setup
+    driver, login_page = setup
     login_page = LoginPage(driver)
-    driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login")
   
     # Enter valid username and invalid pwd
     login_page.enter_username("Admin")
@@ -47,3 +47,14 @@ def test_invalid_login(setup):
     # assert err msg displayed
     err_msg = login_page.get_error_message()
     assert err_msg == "Invalid credentials"
+  
+def test_left_inputfield_blank(setup):
+    driver, login_page = setup
+    login_page = LoginPage(driver)
+
+    # click login btn
+    login_page.click_login()
+
+    # assert blank msg displayed
+    blank_err_msg = login_page.blank_error_message()
+    assert blank_err_msg == "Required"

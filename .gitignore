@@ -16,6 +16,7 @@ __pycache__/
 Thumbs.db
 
 *.log
+geckodriver.log
 
 .vscode/
 .idea/
