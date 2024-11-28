@@ -52,13 +52,13 @@ python --version
 
 **"Browser"**:
 
--**Chrome**:
+-Chrome:
 [Download and install the latest version of Google Chrome](https://www.google.com/chrome/)
 
--**Firefox**:
+-Firefox:
 [Download and install the latest version of Mozilla Firefox](https://www.mozilla.org/firefox/)
 
--**Safari**:
+-Safari:
 
 Safari is pre-installed on macOS. To enable WebDriver:
 
