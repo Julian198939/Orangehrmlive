@@ -21,6 +21,7 @@ Orangehrmlive/
 ├── .gitignore # Git ignore rules
 ├── geckodriver.log # Firefox WebDriver logs
 ├── README.md # Documentation (this file)
+├── requirements.txt # dependency
 
 ```
 
@@ -71,21 +72,21 @@ safaridriver --enable
 
 ## 3. Set Up a Virtual Environment and Install Dependencies
 
-Step 1: Create a Virtual Environment
+**Step 1: Create a Virtual Environment**
 
 Run the following command in the project directory:
 
-````bash
+```bash
 python -m venv venv
 ```
 
-Step 2: Activate the Virtual Environment
+**Step 2: Activate the Virtual Environment**
 
 •macOS/Linux:
 
 ```bash
 source venv/bin/activate
-````
+```
 
 •Windows:
 
@@ -93,7 +94,7 @@ source venv/bin/activate
 venv\Scripts\activate
 ```
 
-Step 3: Install Dependencies
+**Step 3: Install Dependencies**
 
 Install the required dependencies using pip:
 
@@ -110,7 +111,7 @@ pytest
 
 ```
 
-Step 4: Run Tests
+**Step 4: Run Tests**
 
 To run tests using Chrome:
 
@@ -136,11 +137,11 @@ If no --browser argument is provided, tests will run on Chrome by default:
 pytest tests/login/test_login.py
 ```
 
-Step 5: Test Output and Screenshots
+**Step 5: Test Output and Screenshots**
 • Test results will be displayed in the terminal.
 • If any test requires a screenshot, the images will be saved in the screenshots folder at the project root.
 
-Expected Output
+**Expected Output**
 
 If all tests pass successfully, the terminal will display output like the following:
 
