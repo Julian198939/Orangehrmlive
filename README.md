@@ -55,12 +55,18 @@ python --version
 -Chrome:
 [Download and install the latest version of Google Chrome](https://www.google.com/chrome/)
 
+**Chrome 75+ Version required**
+
 -Firefox:
 [Download and install the latest version of Mozilla Firefox](https://www.mozilla.org/firefox/)
 
+**Firefox 60+ Version required**
+
 -Safari:
 
-Safari is pre-installed on macOS. To enable WebDriver:
+Safari is pre-installed on macOS. Before you enable WebDriver,your macOS needs to be at least macOS 10.13 (High Sierra) or newer, and Safari must be version 12.
+
+**To enable WebDriver**:
 
 1. Go to **Safari > Preferences > Advanced**, and check **Show Develop menu in the menu bar**.
 2. From the Develop menu, enable **Allow Remote Automation**.
